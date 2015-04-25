@@ -2,6 +2,9 @@
 # faster when the matrix does not change by caching the earlier
 # result. 
 
+# This code is modified from the example version of caching
+# mean of a vector available in the R programming course webpage
+
 
 # makeCacheMatrix creates a special matrix which has the ability
 # to cache its inverse. makeCacheMatrix creates a list of functions namely:
@@ -42,10 +45,10 @@ makeCacheMatrix <- function(x = matrix()) {
 
 # cacheSolve does the job of returning the inverse. If the inverse 
 # exists in the cache, the value of the cache is returned. Otherwise
-# the inverse is computed using solve and stored in the cache
+# the inverse is computed using solve and stored in the cache.
 cacheSolve <- function(x, ...) {
 
-	# retried the value of inverse in the cache
+	# retrieve the value of inverse in the cache
 	inv <- x$getinverse()
 	
 	# check if the cache is valid
