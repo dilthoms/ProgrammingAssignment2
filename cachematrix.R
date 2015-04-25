@@ -14,11 +14,13 @@
 # 4. get the cached inverse of the matrix
 
 
-makeCacheMatrix <- function(x = matrix()) {
+makeCacheMatrix <- function(mat = matrix()) {
 
 	# initialize cachedinv to null to indicate cache is invalid 
 	cachedinv <- NULL
+  # store the input matrix in variable mat
 	
+  
 	# if the matrix changes, the new matrix can be set using this function.
 	# Invalidate the cache after setting the new matrix.
 	set <- function(y) {
